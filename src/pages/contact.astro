@@ -5,14 +5,9 @@ const email = import.meta.env.CONTACT_EMAIL;
 const accessKey = import.meta.env.WEB3FORMS_ACCESS_KEY;
 ---
 
-<PageLayout
-  title="Form"
-  eyebrow="Say hello"
-  description="Your message lands straight in my inbox."
->
+<PageLayout title="Form" eyebrow="Say hello" description="Your message lands straight in my inbox.">
   <div class="prose">
-    <p>
-    </p>
+    <p></p>
   </div>
 
   <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
@@ -72,8 +67,7 @@ const accessKey = import.meta.env.WEB3FORMS_ACCESS_KEY;
         form.reset();
       } else {
         status.dataset.state = 'error';
-        status.textContent =
-          'Something went wrong. Please use the email link above instead.';
+        status.textContent = 'Something went wrong. Please use the email link above instead.';
       }
     } catch {
       status.dataset.state = 'error';

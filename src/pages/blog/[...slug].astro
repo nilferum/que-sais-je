@@ -21,8 +21,7 @@ export async function getStaticPaths() {
 const { post, prev, next } = Astro.props;
 const { Content } = await render(post);
 
-const fmt = (d: Date) =>
-  `${d.getFullYear()}, ${d.getMonth() + 1}.${d.getDate()}`;
+const fmt = (d: Date) => `${d.getFullYear()}, ${d.getMonth() + 1}.${d.getDate()}`;
 ---
 
 <PageLayout

@@ -10,7 +10,6 @@ cover: '/images/blood-moon.webp'
 featured: true
 pageNumber: 'NO. 01'
 tags: ['Astro', 'Node.js', 'Diary']
-
 ---
 
 ｢HTMLは、人を殺します。｣

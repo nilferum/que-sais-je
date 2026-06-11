@@ -2,7 +2,7 @@
 title: 'Astro最高 その2'
 bigTitle: 'Astrologian'
 emphasis: 'Astrologian.'
-headline: "How to become an {emphasis}"
+headline: 'How to become an {emphasis}'
 excerpt: '3. "Boredom and drudgery are evil." by Eric Raymond'
 author: 'nilferum'
 date: 2026-06-11
@@ -10,7 +10,6 @@ cover: '/images/pink-particles.webp'
 featured: true
 pageNumber: 'NO. 02'
 tags: ['Astro', 'Diary']
-
 ---
 
 ## まずAstroって名前がいい
@@ -59,8 +58,6 @@ JavaScript、スキル面でもそこまで得意でもないんですよね。
 しかもそこで書いた.mdをほぼそのままディレクトリに入れるだけ完成。
 
 AstroのfrontmatterもObsidianに慣れてるので取っつきやすく、流用も出来、なんならフォーマットを揃えれば万事恙無し。
-
-
 
 ### Notionで書いてそのまま記事にできる(まだ試してない)
 

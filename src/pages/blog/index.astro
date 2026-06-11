@@ -7,8 +7,7 @@ const posts = (await getCollection('posts', ({ data }) => !data.draft)).sort(
   (a, b) => +b.data.date - +a.data.date,
 );
 
-const fmt = (d: Date) =>
-  `${d.getFullYear()}, ${d.getMonth() + 1}.${d.getDate()}`;
+const fmt = (d: Date) => `${d.getFullYear()}, ${d.getMonth() + 1}.${d.getDate()}`;
 
 const renderHeadline = (headline: string, emphasis?: string) => {
   if (!emphasis) return headline;
@@ -16,11 +15,7 @@ const renderHeadline = (headline: string, emphasis?: string) => {
 };
 ---
 
-<PageLayout
-  title="Blog"
-  eyebrow="Journal"
-  description="投稿日時順に並んでいます。"
->
+<PageLayout title="Blog" eyebrow="Journal" description="投稿日時順に並んでいます。">
   <div class="post-list">
     {
       posts.map((post) => {
