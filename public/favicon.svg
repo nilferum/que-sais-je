@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 地: サイトの body-bg。角丸は rx で調整（0 で四角） -->
+  <rect width="64" height="64" rx="14" fill="#121418"/>
+  <!-- 星（4芒・凹カーブ）。中心(32,32)・先端半径20。色は blog-bg(生成り) -->
+  <path d="M32 12 Q32 32 52 32 Q32 32 32 52 Q32 32 12 32 Q32 32 32 12 Z" fill="#f0ede9"/>
+  <!-- 差し色のひと粒。accent-color(rose)。位置・サイズは自由に -->
+  <circle cx="46" cy="18" r="3" fill="#7d6871"/>
+</svg>

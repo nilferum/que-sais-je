@@ -1,0 +1,66 @@
+---
+interface MenuItem {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  items?: MenuItem[];
+}
+
+const {
+  items = [
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'RSS', href: '/rss.xml' },
+  ],
+} = Astro.props;
+---
+
+<button
+  type="button"
+  class="menu-toggle"
+  aria-label="Open menu"
+  aria-controls="primary-menu"
+  aria-expanded="false"
+  data-menu-toggle
+>
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+  <span class="menu-toggle__bar"></span>
+</button>
+
+<div class="blog-part is-menu" id="primary-menu" data-menu>
+  {
+    items.map((item) => (
+      <a href={item.href} class="blog-menu">
+        {item.label}
+      </a>
+    ))
+  }
+</div>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const menu = document.querySelector<HTMLElement>('[data-menu]');
+
+  const setOpen = (open: boolean) => {
+    if (!toggle || !menu) return;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    toggle.classList.toggle('is-open', open);
+    menu.classList.toggle('is-open', open);
+    document.body.classList.toggle('menu-open', open);
+  };
+
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    setOpen(open);
+  });
+
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+</script>

@@ -1,0 +1,38 @@
+# build output
+dist/
+# generated types
+.astro/
+# stray compiled SCSS (source is src/styles/global.scss; Astro compiles at build)
+src/styles/global.css
+src/styles/global.css.map
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# environment variables
+.env
+.env.*
+!.env.example
+
+# editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# misc
+.cache/
+.tmp/
+.turbo/
+
+# claude / agent artifacts
+.claude/
