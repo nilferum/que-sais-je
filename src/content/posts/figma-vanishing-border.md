@@ -3,7 +3,7 @@ title: 'Figiyama Gangsta Paradise'
 bigTitle: 'Figiyama'
 emphasis: 'Figiyama'
 headline: '{emphasis} Gangsta Paradise'
-excerpt: '線が消える。犯人はいつも子要素だった。'
+excerpt: 'What is this? Absolutely atrocious... Have you ever stopped to consider what it would feel like to be shot with a line like this?'
 author: 'nilferum'
 date: 2026-07-14
 cover: '/images/inverted-fuji.webp'
